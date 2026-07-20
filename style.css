@@ -857,6 +857,17 @@ section {
     font-weight: 500;
 }
 
+.contact-link {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-link:hover {
+    color: var(--text-secondary);
+    text-decoration: underline;
+}
+
 /* Form Styles */
 .contact-form {
     display: flex;
