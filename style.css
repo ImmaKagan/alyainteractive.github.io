@@ -469,7 +469,26 @@ section {
     height: 8px;
     background: #ffffff;
     border-radius: 50%;
-    box-shadow: 0 0 8px #ffffff;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+    animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.35;
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        transform: scale(1.35);
+        opacity: 1;
+        box-shadow: 0 0 16px rgba(255, 255, 255, 1), 0 0 24px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0.35;
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+    }
 }
 
 .hero-title {
