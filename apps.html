@@ -3,16 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Alya Interactive - Innovative, smart & minimalist mobile application development studio. Creators of HushGuard, SnackTask, and next-gen mobile experiences.">
-    <meta name="keywords" content="Alya Interactive, HushGuard, SnackTask, Mobile Studio, App Development, Flutter, iOS, Android, Minimalist Design">
+    <meta name="description" content="Alya Interactive - Full Mobile Applications Directory & Portfolio. Explore our entire catalog of iOS & Android apps.">
+    <meta name="keywords" content="Alya Interactive, Apps Catalog, HushGuard, SnackTask, Mobile Directory, Flutter Apps">
     <meta name="author" content="Alya Interactive">
-    <meta property="og:title" content="Alya Interactive | Mobile App & Digital Experience Studio">
-    <meta property="og:description" content="Redefining mobile experiences with minimalist design and intelligent technology. Explore our apps.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://immakagan.github.io/alyainteractive.github.io/">
-    <meta property="og:image" content="assets/images/hushguard_mockup.png">
-    
-    <title>Alya Interactive | Mobile App & Digital Experience Studio</title>
+    <title>All Applications | Alya Interactive Catalog</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,19 +28,12 @@
     </div>
     
     <!-- Header / Navbar -->
-    <header class="navbar-header" id="navbar">
+    <header class="navbar-header scrolled" id="navbar">
         <div class="nav-container">
-            <a href="#hero" class="brand-logo" id="brand-logo">
+            <a href="index.html" class="brand-logo" id="brand-logo">
                 <img src="assets/images/logo.png" alt="Alya Interactive Logo" class="brand-logo-img">
                 <span class="logo-text">Alya<span class="highlight">Interactive</span></span>
             </a>
-            
-            <nav class="nav-menu" id="nav-menu">
-                <a href="#hero" class="nav-link active" id="nav-home" data-i18n="nav_home">Home</a>
-                <a href="#apps" class="nav-link" id="nav-apps" data-i18n="nav_apps">Products</a>
-                <a href="#philosophy" class="nav-link" id="nav-philosophy" data-i18n="nav_philosophy">Vision</a>
-                <a href="#contact" class="nav-link" id="nav-contact" data-i18n="nav_contact">Contact</a>
-            </nav>
             
             <div class="nav-actions">
                 <!-- 10 Languages i18n Dropdown -->
@@ -70,71 +57,40 @@
                     </div>
                 </div>
 
-                <a href="https://github.com/immakagan" target="_blank" rel="noopener" class="btn-github-nav" id="github-nav-btn" title="GitHub Profile">
-                    <i class="fa-brands fa-github"></i> GitHub
+                <a href="index.html" class="btn-primary" id="btn-back-home">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span data-i18n="back_to_home">Back to Main Page</span>
                 </a>
-                <button class="mobile-toggle" id="mobile-toggle-btn" aria-label="Toggle Navigation Menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section class="hero-section" id="hero">
-            <div class="hero-content">
-                <div class="badge-pill">
-                    <span class="badge-dot"></span>
-                    <span data-i18n="badge_studio">Mobile Innovation Studio</span>
-                </div>
-                <h1 class="hero-title">
-                    <span data-i18n="hero_title_prefix">Redefining Next-Gen </span><span class="gradient-text" data-i18n="hero_title_highlight">Mobile Experiences</span>
-                </h1>
-                <p class="hero-subtitle" data-i18n="hero_subtitle">
-                    Alya Interactive crafts elegant, purposeful mobile applications combining minimalist design philosophy, intelligent background software, and seamless performance.
-                </p>
-                <div class="hero-cta-group">
-                    <a href="#apps" class="btn-primary" id="btn-explore-apps">
-                        <span data-i18n="btn_explore">Explore Applications</span>
-                        <i class="fa-solid fa-arrow-down"></i>
-                    </a>
-                    <a href="#contact" class="btn-secondary" id="btn-contact-hero">
-                        <span data-i18n="btn_contact">Get in Touch</span>
-                        <i class="fa-solid fa-paper-plane"></i>
-                    </a>
-                </div>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">2+</span>
-                        <span class="stat-label" data-i18n="stat_apps">Active Flagship Apps</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label" data-i18n="stat_original">Original & Privacy-First</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat-item">
-                        <span class="stat-number">Flutter</span>
-                        <span class="stat-label" data-i18n="stat_power">Multiplatform Power</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Apps Section -->
-        <section class="apps-section" id="apps">
+        <!-- Full Apps Catalog Section -->
+        <section class="directory-section">
             <div class="section-header">
-                <span class="section-tag" data-i18n="portfolio_tag">OUR PORTFOLIO</span>
-                <h2 class="section-title" data-i18n="portfolio_title">Featured Applications</h2>
-                <p class="section-description" data-i18n="portfolio_sub">Discover our intuitive, beautiful, and solution-driven mobile applications.</p>
+                <span class="section-tag" data-i18n="directory_tag">APP DIRECTORY</span>
+                <h2 class="section-title" data-i18n="directory_title">All Mobile Applications</h2>
+                <p class="section-description" data-i18n="directory_sub">Explore our complete portfolio of intelligent, minimalist, and solution-oriented mobile products.</p>
             </div>
 
-            <div class="apps-grid">
+            <!-- Search & Filter Bar -->
+            <div class="directory-controls">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="app-search-input" placeholder="Search applications..." onkeyup="filterApps()" data-i18n-ph="search_ph">
+                </div>
+                <div class="filter-pills" id="filter-pills">
+                    <button class="filter-pill active" onclick="filterCategory('all', this)" data-i18n="cat_all">All</button>
+                    <button class="filter-pill" onclick="filterCategory('sleep', this)" data-i18n="cat_sleep">Sleep & Sound</button>
+                    <button class="filter-pill" onclick="filterCategory('productivity', this)" data-i18n="cat_prod">Productivity</button>
+                    <button class="filter-pill" onclick="filterCategory('upcoming', this)" data-i18n="cat_upcoming">Coming Soon</button>
+                </div>
+            </div>
+
+            <div class="apps-grid" id="full-apps-grid">
                 <!-- App Card 1: HushGuard -->
-                <article class="app-card" id="app-card-hushguard">
+                <article class="app-card" data-category="sleep" data-name="hushguard sleep noise masking baby">
                     <div class="app-card-image">
                         <img src="assets/images/hushguard_mockup.png" alt="HushGuard Smart Noise Masking Assistant" loading="lazy">
                         <div class="app-badge">Sleep & Smart Tech</div>
@@ -168,7 +124,7 @@
                 </article>
 
                 <!-- App Card 2: SnackTask -->
-                <article class="app-card" id="app-card-snacktask">
+                <article class="app-card" data-category="productivity" data-name="snacktask focus task gamified productivity">
                     <div class="app-card-image">
                         <img src="assets/images/snacktask_mockup.png" alt="SnackTask Gamified Task & Focus Booster" loading="lazy">
                         <div class="app-badge accent-green">Productivity & Game</div>
@@ -200,117 +156,35 @@
                         </div>
                     </div>
                 </article>
-            </div>
 
-            <!-- View All Applications Button for Future Expansion -->
-            <div class="view-all-apps-wrapper">
-                <a href="apps.html" class="btn-primary btn-all-apps" id="btn-view-all-apps">
-                    <i class="fa-solid fa-border-all"></i>
-                    <span data-i18n="btn_view_all">View Full App Directory</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-
-            <!-- Future Lab Card -->
-            <div class="future-lab-banner" id="future-lab">
-                <div class="lab-icon"><i class="fa-solid fa-flask-vial"></i></div>
-                <div class="lab-text">
-                    <h3 data-i18n="lab_title">Alya Interactive Lab</h3>
-                    <p data-i18n="lab_desc">Continuously experimenting with AI integrations, interactive gamification engines, and upcoming mobile concepts.</p>
-                </div>
-                <div class="lab-badge" data-i18n="lab_badge">Coming Soon</div>
-            </div>
-        </section>
-
-        <!-- Philosophy Section -->
-        <section class="philosophy-section" id="philosophy">
-            <div class="section-header">
-                <span class="section-tag" data-i18n="vision_tag">OUR VISION</span>
-                <h2 class="section-title" data-i18n="vision_title">Minimalism Meets Engineering</h2>
-                <p class="section-description" data-i18n="vision_sub">Striving for precision in every line of code and every pixel of design.</p>
-            </div>
-
-            <div class="pillars-grid">
-                <div class="pillar-card">
-                    <div class="pillar-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3 data-i18n="p1_title">Sleek & Minimalist</h3>
-                    <p data-i18n="p1_desc">Clutter-free, hyper-intuitive user interfaces designed to delight without friction.</p>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-icon"><i class="fa-solid fa-microchip"></i></div>
-                    <h3 data-i18n="p2_title">Smart Automation</h3>
-                    <p data-i18n="p2_desc">Background algorithms executing with precision to anticipate and serve user needs.</p>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3 data-i18n="p3_title">High Performance</h3>
-                    <p data-i18n="p3_desc">Engineered with Flutter for 60 FPS smooth animations and battery-friendly execution.</p>
-                </div>
-
-                <div class="pillar-card">
-                    <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3 data-i18n="p4_title">Privacy First</h3>
-                    <p data-i18n="p4_desc">User data integrity is paramount. Local on-device processing guarantees privacy.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section class="contact-section" id="contact">
-            <div class="contact-card">
-                <div class="contact-info">
-                    <span class="section-tag" data-i18n="contact_tag">GET IN TOUCH</span>
-                    <h2 data-i18n="contact_title">Have Questions or Ideas?</h2>
-                    <p data-i18n="contact_sub">We are eager to hear feedback, answer inquiries, or explore partnership opportunities.</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fa-solid fa-envelope"></i>
-                            <div>
-                                <strong>Email Us</strong>
-                                <span><a href="mailto:alyainteractive@gmail.com" class="contact-link">alyainteractive@gmail.com</a></span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa-brands fa-instagram"></i>
-                            <div>
-                                <strong>Instagram</strong>
-                                <span><a href="https://www.instagram.com/alyainteractive/" target="_blank" rel="noopener" class="contact-link">@alyainteractive</a></span>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fa-brands fa-github"></i>
-                            <div>
-                                <strong>GitHub</strong>
-                                <span><a href="https://github.com/immakagan" target="_blank" rel="noopener" class="contact-link">github.com/immakagan</a></span>
-                            </div>
-                        </div>
+                <!-- Future Scalable App Card 3 Placeholder -->
+                <article class="app-card lab-card-placeholder" data-category="upcoming" data-name="alya soundscapes white noise ambient lab">
+                    <div class="app-card-body">
+                        <div class="lab-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3 class="app-title">Alya Soundscapes</h3>
+                        <p class="app-tagline">Generative Ambient Audio Engine</p>
+                        <p class="app-summary">Next-gen AI sound generator creating calming ambient soundscapes tailored to your focus state.</p>
+                        <span class="lab-badge">Coming Soon</span>
                     </div>
-                </div>
+                </article>
 
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
-                        <div class="form-group">
-                            <label for="contact-name" data-i18n="lbl_name">Your Name / Organization</label>
-                            <input type="text" id="contact-name" placeholder="e.g. Alex Morgan" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-email" data-i18n="lbl_email">Email Address</label>
-                            <input type="email" id="contact-email" placeholder="alex@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="contact-message" data-i18n="lbl_message">Your Message</label>
-                            <textarea id="contact-message" rows="4" placeholder="Tell us about your project or inquiry..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary btn-block" id="btn-send-message">
-                            <span data-i18n="btn_send">Send Message</span>
-                            <i class="fa-solid fa-paper-plane"></i>
-                        </button>
-                        <div class="form-status" id="form-status"></div>
-                    </form>
-                </div>
+                <!-- Future Scalable App Card 4 Placeholder -->
+                <article class="app-card lab-card-placeholder" data-category="upcoming" data-name="alya focus lab ai productivity tracker">
+                    <div class="app-card-body">
+                        <div class="lab-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3 class="app-title">Alya Focus Lab</h3>
+                        <p class="app-tagline">AI-Powered Workflow Optimizer</p>
+                        <p class="app-summary">Intelligent productivity coach that automatically organizes work sprints and prevents burnout.</p>
+                        <span class="lab-badge">In Development</span>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="back-home-bottom">
+                <a href="index.html" class="btn-secondary">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span data-i18n="back_to_home">Back to Main Page</span>
+                </a>
             </div>
         </section>
     </main>
@@ -326,13 +200,6 @@
                 <p data-i18n="footer_tagline">Minimalist & intelligent mobile software solutions.</p>
             </div>
             
-            <div class="footer-links">
-                <a href="#hero" data-i18n="nav_home">Home</a>
-                <a href="#apps" data-i18n="nav_apps">Products</a>
-                <a href="#philosophy" data-i18n="nav_philosophy">Vision</a>
-                <a href="#contact" data-i18n="nav_contact">Contact</a>
-            </div>
-
             <div class="footer-bottom">
                 <p data-i18n="footer_rights">© 2026 Alya Interactive. All rights reserved.</p>
                 <button class="back-to-top" id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to Top">

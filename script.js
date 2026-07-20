@@ -1,18 +1,32 @@
-// Language Dropdown Toggle
-function toggleLangMenu(event) {
-    event.stopPropagation();
-    const dropdown = document.getElementById('lang-dropdown');
-    if (dropdown) {
-        dropdown.classList.toggle('active');
-    }
+// Directory Real-Time Filter & Search Logic
+let currentCategory = 'all';
+
+function filterCategory(cat, btnElement) {
+    currentCategory = cat;
+    document.querySelectorAll('.filter-pill').forEach(btn => btn.classList.remove('active'));
+    if (btnElement) btnElement.classList.add('active');
+    filterApps();
 }
 
-document.addEventListener('click', (e) => {
-    const dropdown = document.getElementById('lang-dropdown');
-    if (dropdown && !dropdown.contains(e.target)) {
-        dropdown.classList.remove('active');
-    }
-});
+function filterApps() {
+    const searchInput = document.getElementById('app-search-input');
+    const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+    const cards = document.querySelectorAll('#full-apps-grid .app-card');
+
+    cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category') || '';
+        const cardName = card.getAttribute('data-name') || '';
+
+        const matchesCat = (currentCategory === 'all' || cardCat === currentCategory);
+        const matchesQuery = (query === '' || cardName.includes(query));
+
+        if (matchesCat && matchesQuery) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
 
 /* ==========================================================================
    Alya Interactive - Interactive Behaviors & UI Logic
