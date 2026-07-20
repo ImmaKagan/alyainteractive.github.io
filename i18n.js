@@ -602,9 +602,21 @@ function setLanguage(langKey) {
     if (activeLabel) {
         activeLabel.innerText = langKey.toUpperCase();
     }
+
+    // Close language dropdown if open
+    const dropdown = document.getElementById('lang-dropdown');
+    if (dropdown) {
+        dropdown.classList.remove('active');
+    }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initI18n() {
     const savedLang = localStorage.getItem('alya_lang') || 'en';
     setLanguage(savedLang);
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initI18n);
+} else {
+    initI18n();
+}
