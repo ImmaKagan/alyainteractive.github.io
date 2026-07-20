@@ -173,10 +173,12 @@ body {
 }
 
 .brand-logo-img {
-    height: 36px;
+    height: 38px;
     width: auto;
     object-fit: contain;
     border-radius: 6px;
+    filter: invert(1) brightness(1.2);
+    mix-blend-mode: screen;
 }
 
 .logo-icon {
