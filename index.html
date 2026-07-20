@@ -42,13 +42,34 @@
             </a>
             
             <nav class="nav-menu" id="nav-menu">
-                <a href="#hero" class="nav-link active" id="nav-home">Home</a>
-                <a href="#apps" class="nav-link" id="nav-apps">Products</a>
-                <a href="#philosophy" class="nav-link" id="nav-philosophy">Vision</a>
-                <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+                <a href="#hero" class="nav-link active" id="nav-home" data-i18n="nav_home">Home</a>
+                <a href="#apps" class="nav-link" id="nav-apps" data-i18n="nav_apps">Products</a>
+                <a href="#philosophy" class="nav-link" id="nav-philosophy" data-i18n="nav_philosophy">Vision</a>
+                <a href="#contact" class="nav-link" id="nav-contact" data-i18n="nav_contact">Contact</a>
             </nav>
             
             <div class="nav-actions">
+                <!-- 10 Languages i18n Dropdown -->
+                <div class="lang-dropdown" id="lang-dropdown">
+                    <button class="lang-btn" id="lang-btn" onclick="toggleLangMenu(event)" aria-label="Select Language">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="current-lang-code">EN</span>
+                        <i class="fa-solid fa-chevron-down lang-chevron"></i>
+                    </button>
+                    <div class="lang-menu" id="lang-menu">
+                        <button class="lang-option" data-lang="en" onclick="setLanguage('en')">🇬🇧 English</button>
+                        <button class="lang-option" data-lang="tr" onclick="setLanguage('tr')">🇹🇷 Türkçe</button>
+                        <button class="lang-option" data-lang="es" onclick="setLanguage('es')">🇪🇸 Español</button>
+                        <button class="lang-option" data-lang="de" onclick="setLanguage('de')">🇩🇪 Deutsch</button>
+                        <button class="lang-option" data-lang="fr" onclick="setLanguage('fr')">🇫🇷 Français</button>
+                        <button class="lang-option" data-lang="it" onclick="setLanguage('it')">🇮🇹 Italiano</button>
+                        <button class="lang-option" data-lang="pt" onclick="setLanguage('pt')">🇵🇹 Português</button>
+                        <button class="lang-option" data-lang="ja" onclick="setLanguage('ja')">🇯🇵 日本語</button>
+                        <button class="lang-option" data-lang="ko" onclick="setLanguage('ko')">🇰🇷 한국어</button>
+                        <button class="lang-option" data-lang="zh" onclick="setLanguage('zh')">🇨🇳 中文</button>
+                    </div>
+                </div>
+
                 <a href="https://github.com/immakagan" target="_blank" rel="noopener" class="btn-github-nav" id="github-nav-btn" title="GitHub Profile">
                     <i class="fa-brands fa-github"></i> GitHub
                 </a>
@@ -65,21 +86,21 @@
             <div class="hero-content">
                 <div class="badge-pill">
                     <span class="badge-dot"></span>
-                    <span>Mobile Innovation Studio</span>
+                    <span data-i18n="badge_studio">Mobile Innovation Studio</span>
                 </div>
                 <h1 class="hero-title">
-                    Redefining Next-Gen <span class="gradient-text">Mobile Experiences</span>
+                    <span data-i18n="hero_title_prefix">Redefining Next-Gen </span><span class="gradient-text" data-i18n="hero_title_highlight">Mobile Experiences</span>
                 </h1>
-                <p class="hero-subtitle">
-                    Alya Interactive crafts elegant, purposeful mobile applications combining minimalist design philosophy, intelligent background software, and seamless cross-platform performance.
+                <p class="hero-subtitle" data-i18n="hero_subtitle">
+                    Alya Interactive crafts elegant, purposeful mobile applications combining minimalist design philosophy, intelligent background software, and seamless performance.
                 </p>
                 <div class="hero-cta-group">
                     <a href="#apps" class="btn-primary" id="btn-explore-apps">
-                        <span>Explore Applications</span>
+                        <span data-i18n="btn_explore">Explore Applications</span>
                         <i class="fa-solid fa-arrow-down"></i>
                     </a>
                     <a href="#contact" class="btn-secondary" id="btn-contact-hero">
-                        <span>Get in Touch</span>
+                        <span data-i18n="btn_contact">Get in Touch</span>
                         <i class="fa-solid fa-paper-plane"></i>
                     </a>
                 </div>
@@ -87,17 +108,17 @@
                 <div class="hero-stats">
                     <div class="stat-item">
                         <span class="stat-number">2+</span>
-                        <span class="stat-label">Active Flagship Apps</span>
+                        <span class="stat-label" data-i18n="stat_apps">Active Flagship Apps</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <span class="stat-number">100%</span>
-                        <span class="stat-label">Original & Privacy-First</span>
+                        <span class="stat-label" data-i18n="stat_original">Original & Privacy-First</span>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat-item">
                         <span class="stat-number">Flutter</span>
-                        <span class="stat-label">Multiplatform Power</span>
+                        <span class="stat-label" data-i18n="stat_power">Multiplatform Power</span>
                     </div>
                 </div>
             </div>
@@ -106,9 +127,9 @@
         <!-- Apps Section -->
         <section class="apps-section" id="apps">
             <div class="section-header">
-                <span class="section-tag">OUR PORTFOLIO</span>
-                <h2 class="section-title">Featured Applications</h2>
-                <p class="section-description">Discover our intuitive, beautiful, and solution-driven mobile applications.</p>
+                <span class="section-tag" data-i18n="portfolio_tag">OUR PORTFOLIO</span>
+                <h2 class="section-title" data-i18n="portfolio_title">Featured Applications</h2>
+                <p class="section-description" data-i18n="portfolio_sub">Discover our intuitive, beautiful, and solution-driven mobile applications.</p>
             </div>
 
             <div class="apps-grid">
@@ -126,9 +147,9 @@
                             </div>
                             <span class="app-version">v1.20</span>
                         </div>
-                        <p class="app-tagline">Smart Noise Masking & Baby Sleep Assistant</p>
-                        <p class="app-summary">
-                            An intelligent assistant that detects sudden ambient sound changes in real-time and triggers soothing lullabies & white noise to protect your baby's sleep uninterrupted.
+                        <p class="app-tagline" data-i18n="hushguard_tagline">Smart Noise Masking & Baby Sleep Assistant</p>
+                        <p class="app-summary" data-i18n="hushguard_summary">
+                            An intelligent assistant that detects sudden ambient sound changes in real-time and triggers soothing lullabies & white noise to protect your baby's sleep.
                         </p>
                         
                         <div class="app-features-chips">
@@ -139,7 +160,7 @@
                         
                         <div class="app-card-actions">
                             <button class="btn-card-details" onclick="openModal('hushguard')" id="btn-details-hushguard">
-                                <span>Learn More</span>
+                                <span data-i18n="btn_details">Learn More</span>
                                 <i class="fa-solid fa-chevron-right"></i>
                             </button>
                         </div>
@@ -160,9 +181,9 @@
                             </div>
                             <span class="app-version">v1.0</span>
                         </div>
-                        <p class="app-tagline">Focus & Level Up: Gamified Productivity Assistant</p>
-                        <p class="app-summary">
-                            Transform daily tasks and focus sprints into engaging micro-missions, earn experience points, unlock achievement badges, and level up your daily productivity.
+                        <p class="app-tagline" data-i18n="snacktask_tagline">Focus & Level Up: Gamified Productivity Assistant</p>
+                        <p class="app-summary" data-i18n="snacktask_summary">
+                            Transform daily tasks and focus sprints into engaging micro-missions, earn experience points, unlock achievement badges, and level up daily productivity.
                         </p>
                         
                         <div class="app-features-chips">
@@ -173,7 +194,7 @@
                         
                         <div class="app-card-actions">
                             <button class="btn-card-details" onclick="openModal('snacktask')" id="btn-details-snacktask">
-                                <span>Learn More</span>
+                                <span data-i18n="btn_details">Learn More</span>
                                 <i class="fa-solid fa-chevron-right"></i>
                             </button>
                         </div>
@@ -185,44 +206,44 @@
             <div class="future-lab-banner" id="future-lab">
                 <div class="lab-icon"><i class="fa-solid fa-flask-vial"></i></div>
                 <div class="lab-text">
-                    <h3>Alya Interactive Lab</h3>
-                    <p>Continuously experimenting with AI integrations, interactive gamification engines, and upcoming mobile concepts.</p>
+                    <h3 data-i18n="lab_title">Alya Interactive Lab</h3>
+                    <p data-i18n="lab_desc">Continuously experimenting with AI integrations, interactive gamification engines, and upcoming mobile concepts.</p>
                 </div>
-                <div class="lab-badge">Coming Soon</div>
+                <div class="lab-badge" data-i18n="lab_badge">Coming Soon</div>
             </div>
         </section>
 
         <!-- Philosophy Section -->
         <section class="philosophy-section" id="philosophy">
             <div class="section-header">
-                <span class="section-tag">OUR VISION</span>
-                <h2 class="section-title">Minimalism Meets Engineering</h2>
-                <p class="section-description">Striving for precision in every line of code and every pixel of design.</p>
+                <span class="section-tag" data-i18n="vision_tag">OUR VISION</span>
+                <h2 class="section-title" data-i18n="vision_title">Minimalism Meets Engineering</h2>
+                <p class="section-description" data-i18n="vision_sub">Striving for precision in every line of code and every pixel of design.</p>
             </div>
 
             <div class="pillars-grid">
                 <div class="pillar-card">
                     <div class="pillar-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
-                    <h3>Sleek & Minimalist</h3>
-                    <p>Clutter-free, hyper-intuitive user interfaces designed to delight without friction.</p>
+                    <h3 data-i18n="p1_title">Sleek & Minimalist</h3>
+                    <p data-i18n="p1_desc">Clutter-free, hyper-intuitive user interfaces designed to delight without friction.</p>
                 </div>
 
                 <div class="pillar-card">
                     <div class="pillar-icon"><i class="fa-solid fa-microchip"></i></div>
-                    <h3>Smart Automation</h3>
-                    <p>Background algorithms executing with precision to anticipate and serve user needs.</p>
+                    <h3 data-i18n="p2_title">Smart Automation</h3>
+                    <p data-i18n="p2_desc">Background algorithms executing with precision to anticipate and serve user needs.</p>
                 </div>
 
                 <div class="pillar-card">
                     <div class="pillar-icon"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>High Performance</h3>
-                    <p>Engineered with Flutter for 60 FPS smooth animations and battery-friendly execution.</p>
+                    <h3 data-i18n="p3_title">High Performance</h3>
+                    <p data-i18n="p3_desc">Engineered with Flutter for 60 FPS smooth animations and battery-friendly execution.</p>
                 </div>
 
                 <div class="pillar-card">
                     <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Privacy First</h3>
-                    <p>User data integrity is paramount. Local on-device processing guarantees privacy.</p>
+                    <h3 data-i18n="p4_title">Privacy First</h3>
+                    <p data-i18n="p4_desc">User data integrity is paramount. Local on-device processing guarantees privacy.</p>
                 </div>
             </div>
         </section>
@@ -231,9 +252,9 @@
         <section class="contact-section" id="contact">
             <div class="contact-card">
                 <div class="contact-info">
-                    <span class="section-tag">GET IN TOUCH</span>
-                    <h2>Have Questions or Collaboration Ideas?</h2>
-                    <p>We are always eager to hear feedback, answer inquiries, or explore exciting partnership opportunities.</p>
+                    <span class="section-tag" data-i18n="contact_tag">GET IN TOUCH</span>
+                    <h2 data-i18n="contact_title">Have Questions or Ideas?</h2>
+                    <p data-i18n="contact_sub">We are eager to hear feedback, answer inquiries, or explore partnership opportunities.</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
@@ -256,19 +277,19 @@
                 <div class="contact-form-wrapper">
                     <form class="contact-form" id="contact-form" onsubmit="handleFormSubmit(event)">
                         <div class="form-group">
-                            <label for="contact-name">Your Name / Organization</label>
+                            <label for="contact-name" data-i18n="lbl_name">Your Name / Organization</label>
                             <input type="text" id="contact-name" placeholder="e.g. Alex Morgan" required>
                         </div>
                         <div class="form-group">
-                            <label for="contact-email">Email Address</label>
+                            <label for="contact-email" data-i18n="lbl_email">Email Address</label>
                             <input type="email" id="contact-email" placeholder="alex@example.com" required>
                         </div>
                         <div class="form-group">
-                            <label for="contact-message">Your Message</label>
+                            <label for="contact-message" data-i18n="lbl_message">Your Message</label>
                             <textarea id="contact-message" rows="4" placeholder="Tell us about your project or inquiry..." required></textarea>
                         </div>
                         <button type="submit" class="btn-primary btn-block" id="btn-send-message">
-                            <span>Send Message</span>
+                            <span data-i18n="btn_send">Send Message</span>
                             <i class="fa-solid fa-paper-plane"></i>
                         </button>
                         <div class="form-status" id="form-status"></div>
@@ -283,21 +304,21 @@
         <div class="footer-container">
             <div class="footer-brand">
                 <div class="brand-logo">
-                    <img src="assets/images/logo.png" alt="Alya Interactive Logo" class="brand-logo-img" onerror="this.style.display='none';">
+                    <img src="assets/images/logo.png" alt="Alya Interactive Logo" class="brand-logo-img">
                     <span class="logo-text">Alya<span class="highlight">Interactive</span></span>
                 </div>
-                <p>Minimalist & intelligent mobile software solutions.</p>
+                <p data-i18n="footer_tagline">Minimalist & intelligent mobile software solutions.</p>
             </div>
             
             <div class="footer-links">
-                <a href="#hero">Home</a>
-                <a href="#apps">Products</a>
-                <a href="#philosophy">Vision</a>
-                <a href="#contact">Contact</a>
+                <a href="#hero" data-i18n="nav_home">Home</a>
+                <a href="#apps" data-i18n="nav_apps">Products</a>
+                <a href="#philosophy" data-i18n="nav_philosophy">Vision</a>
+                <a href="#contact" data-i18n="nav_contact">Contact</a>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Alya Interactive. All rights reserved.</p>
+                <p data-i18n="footer_rights">© 2026 Alya Interactive. All rights reserved.</p>
                 <button class="back-to-top" id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to Top">
                     <i class="fa-solid fa-arrow-up"></i>
                 </button>
@@ -368,7 +389,8 @@
         </div>
     </div>
 
-    <!-- Custom JS -->
+    <!-- Custom i18n & Core JS -->
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

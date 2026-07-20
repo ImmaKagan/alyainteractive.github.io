@@ -1,3 +1,19 @@
+// Language Dropdown Toggle
+function toggleLangMenu(event) {
+    event.stopPropagation();
+    const dropdown = document.getElementById('lang-dropdown');
+    if (dropdown) {
+        dropdown.classList.toggle('active');
+    }
+}
+
+document.addEventListener('click', (e) => {
+    const dropdown = document.getElementById('lang-dropdown');
+    if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('active');
+    }
+});
+
 /* ==========================================================================
    Alya Interactive - Interactive Behaviors & UI Logic
    ========================================================================== */
