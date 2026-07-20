@@ -45,15 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Sticky Navbar Effect on Scroll
     const navbar = document.getElementById('navbar');
     
+    let ticking = false;
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 40) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                if (window.scrollY > 30) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+                highlightActiveNav();
+                ticking = false;
+            });
+            ticking = true;
         }
-        
-        highlightActiveNav();
-    });
+    }, { passive: true });
 
     // 2. Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle-btn');
