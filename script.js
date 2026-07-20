@@ -130,28 +130,55 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// 5. Contact Form Submission Handler
+// 5. Contact Form Submission Handler (FormSubmit API + Mailto Fallback)
 function handleFormSubmit(event) {
     event.preventDefault();
+    const nameInput = document.getElementById('contact-name');
+    const emailInput = document.getElementById('contact-email');
+    const messageInput = document.getElementById('contact-message');
     const statusDiv = document.getElementById('form-status');
     const btnSend = document.getElementById('btn-send-message');
 
     if (!statusDiv || !btnSend) return;
 
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const message = messageInput ? messageInput.value.trim() : '';
+
     btnSend.disabled = true;
     btnSend.innerHTML = `<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>`;
 
-    setTimeout(() => {
+    fetch('https://formsubmit.co/ajax/alyainteractive@gmail.com', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            name: name,
+            email: email,
+            message: message,
+            _subject: `New Inquiry from ${name} via Alya Interactive Website`
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
         statusDiv.className = 'form-status success';
-        statusDiv.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully.';
+        statusDiv.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully to alyainteractive@gmail.com.';
         document.getElementById('contact-form').reset();
-        
+    })
+    .catch(error => {
+        // Fallback to mailto link if API fails
+        const mailtoUri = `mailto:alyainteractive@gmail.com?subject=${encodeURIComponent('Inquiry from ' + name)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
+        window.location.href = mailtoUri;
+        statusDiv.className = 'form-status success';
+        statusDiv.innerHTML = '<i class="fa-solid fa-circle-check"></i> Opening your email client to send message...';
+    })
+    .finally(() => {
         btnSend.disabled = false;
-        btnSend.innerHTML = `<span>Sent</span> <i class="fa-solid fa-check"></i>`;
-
+        btnSend.innerHTML = `<span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>`;
         setTimeout(() => {
-            btnSend.innerHTML = `<span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>`;
             statusDiv.innerHTML = '';
-        }, 4000);
-    }, 1200);
+        }, 6000);
+    });
 }
