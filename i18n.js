@@ -610,6 +610,21 @@ function setLanguage(langKey) {
     }
 }
 
+function toggleLangMenu(event) {
+    if (event) event.stopPropagation();
+    const dropdown = document.getElementById('lang-dropdown');
+    if (dropdown) {
+        dropdown.classList.toggle('active');
+    }
+}
+
+document.addEventListener('click', (e) => {
+    const dropdown = document.getElementById('lang-dropdown');
+    if (dropdown && !dropdown.contains(e.target)) {
+        dropdown.classList.remove('active');
+    }
+});
+
 function initI18n() {
     const savedLang = localStorage.getItem('alya_lang') || 'en';
     setLanguage(savedLang);

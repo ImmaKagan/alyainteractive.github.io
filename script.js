@@ -1,3 +1,12 @@
+// Language Dropdown Toggle
+function toggleLangMenu(event) {
+    if (event) event.stopPropagation();
+    const dropdown = document.getElementById('lang-dropdown');
+    if (dropdown) {
+        dropdown.classList.toggle('active');
+    }
+}
+
 // Directory Real-Time Filter & Search Logic
 let currentCategory = 'all';
 
