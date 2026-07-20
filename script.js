@@ -158,7 +158,9 @@ function handleFormSubmit(event) {
             name: name,
             email: email,
             message: message,
-            _subject: `New Inquiry from ${name} via Alya Interactive Website`
+            _subject: `New Inquiry from ${name} via Alya Interactive Website`,
+            _captcha: "false",
+            _template: "table"
         })
     })
     .then(response => response.json())
