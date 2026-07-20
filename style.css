@@ -1268,6 +1268,97 @@ section {
     cursor: pointer;
 }
 
+/* Privacy Policy Page Styles */
+.policy-section {
+    padding-top: 130px;
+    padding-bottom: 80px;
+}
+
+.policy-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 50px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-card);
+}
+
+.policy-header {
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 24px;
+    margin-bottom: 36px;
+}
+
+.policy-header h1 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 800;
+    margin-top: 6px;
+    margin-bottom: 8px;
+}
+
+.policy-meta {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.policy-content {
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+    line-height: 1.75;
+}
+
+.policy-content h2 {
+    color: var(--text-primary);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-top: 36px;
+    margin-bottom: 16px;
+    border-left: 3px solid #ffffff;
+    padding-left: 12px;
+}
+
+.policy-content h3 {
+    color: #e4e4e7;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+.policy-content p {
+    margin-bottom: 16px;
+}
+
+.policy-content ul {
+    margin-bottom: 20px;
+    padding-left: 24px;
+}
+
+.policy-content li {
+    margin-bottom: 8px;
+}
+
+.policy-back-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-policy-link a {
+    color: var(--text-secondary);
+    text-decoration: underline;
+    font-size: 0.85rem;
+}
+
+.footer-policy-link a:hover {
+    color: #ffffff;
+}
+
 /* ==========================================================================
    Comprehensive Mobile Responsiveness (Phones & Tablets)
    ========================================================================== */
