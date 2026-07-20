@@ -123,18 +123,18 @@ function handleFormSubmit(event) {
     if (!statusDiv || !btnSend) return;
 
     btnSend.disabled = true;
-    btnSend.innerHTML = `<span>Gönderiliyor...</span> <i class="fa-solid fa-spinner fa-spin"></i>`;
+    btnSend.innerHTML = `<span>Sending...</span> <i class="fa-solid fa-spinner fa-spin"></i>`;
 
     setTimeout(() => {
         statusDiv.className = 'form-status success';
-        statusDiv.innerHTML = '<i class="fa-solid fa-circle-check"></i> Mesajınız başarıyla iletildi! En kısa sürede dönüş yapacağız.';
+        statusDiv.innerHTML = '<i class="fa-solid fa-circle-check"></i> Thank you! Your message has been sent successfully.';
         document.getElementById('contact-form').reset();
         
         btnSend.disabled = false;
-        btnSend.innerHTML = `<span>Gönderildi</span> <i class="fa-solid fa-check"></i>`;
+        btnSend.innerHTML = `<span>Sent</span> <i class="fa-solid fa-check"></i>`;
 
         setTimeout(() => {
-            btnSend.innerHTML = `<span>Gönder</span> <i class="fa-solid fa-paper-plane"></i>`;
+            btnSend.innerHTML = `<span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>`;
             statusDiv.innerHTML = '';
         }, 4000);
     }, 1200);
