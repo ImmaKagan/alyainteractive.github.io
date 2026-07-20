@@ -77,96 +77,84 @@
         <section class="policy-section">
             <div class="policy-card">
                 <div class="policy-header">
-                    <span class="section-tag">LEGAL & PRIVACY DISCLOSURE</span>
-                    <h1>Privacy Policy</h1>
+                    <span class="section-tag" data-i18n="pol_tag">LEGAL & PRIVACY DISCLOSURE</span>
+                    <h1 data-i18n="pol_title">Privacy Policy</h1>
                     <p class="policy-meta">Effective Date: July 21, 2026 | Last Updated: July 2026</p>
                 </div>
 
                 <div class="policy-content">
-                    <p>
-                        This Privacy Policy applies to all mobile software applications, games, and digital services developed and published by <strong>Alya Interactive</strong> ("we", "us", "our"), including but not limited to <strong>HushGuard</strong>, <strong>SnackTask</strong>, and <strong>cut-a-boo!</strong>.
+                    <p data-i18n="pol_intro_1">
+                        This Privacy Policy applies to all mobile software applications, games, and digital services developed and published by Alya Interactive ('we', 'us', 'our'), including but not limited to HushGuard, SnackTask, and cut-a-boo!.
                     </p>
-                    <p>
-                        By downloading, installing, or using any of our applications, you agree to the collection and use of information in accordance with this Privacy Policy. We respect user privacy as a foundational engineering principle and strive to minimize data collection.
-                    </p>
-
-                    <h2>1. Core Privacy Principles</h2>
-                    <ul>
-                        <li><strong>Privacy-First Architecture:</strong> We prioritize local, on-device data processing whenever technically feasible.</li>
-                        <li><strong>Zero Sale of Personal Data:</strong> We do not sell, rent, or trade personal identifiers or user data to third parties.</li>
-                        <li><strong>Minimal Collection:</strong> We only request permissions necessary to execute core application features.</li>
-                    </ul>
-
-                    <h2>2. Information Collection and Use by Product</h2>
-
-                    <h3>A. HushGuard (Smart Noise Masking & Baby Sleep Assistant)</h3>
-                    <ul>
-                        <li>
-                            <strong>Microphone & Audio Processing:</strong> HushGuard requires microphone access to monitor real-time ambient noise decibels. All audio analysis is performed <em>strictly locally on your device</em>. We do NOT record, store, transmit, or stream your continuous microphone audio to external servers.
-                        </li>
-                        <li>
-                            <strong>Custom Voice Recordings:</strong> If you record a soothing voice track within the app, the audio file is saved exclusively in your device's local storage.
-                        </li>
-                        <li>
-                            <strong>Smart Radio Feature:</strong> When using parent-child device pairing, an anonymous room code is generated. Only calculated decibel levels and disturbance status are transmitted via Google Firebase Realtime Database. Raw audio is never transmitted across devices.
-                        </li>
-                    </ul>
-
-                    <h3>B. SnackTask (Focus & Gamified Task Assistant)</h3>
-                    <ul>
-                        <li>
-                            <strong>Local Task & Gamification Data:</strong> Your task descriptions, focus session logs, experience points (XP), and earned achievement badges are stored locally on your device storage. We do not inspect, upload, or index your personal to-do list items or task titles on cloud servers.
-                        </li>
-                        <li>
-                            <strong>Anonymized Usage Metrics:</strong> Non-identifying operational analytics may be logged via standard framework SDKs to diagnose crash logs and improve gamification balancing.
-                        </li>
-                    </ul>
-
-                    <h3>C. cut-a-boo! & Mobile Games</h3>
-                    <ul>
-                        <li>
-                            <strong>Gameplay Progress & Analytics:</strong> Game level progression, item unlocks, and interaction events may be processed via Unity Engine telemetry and Firebase to optimize level difficulty and user experience.
-                        </li>
-                    </ul>
-
-                    <h2>3. Third-Party SDKs and Services</h2>
-                    <p>
-                        Our applications may integrate trusted third-party software development kits (SDKs) to enable advertising, analytics, cloud synchronization, or in-app billing. These third parties may collect non-personal identifiers (such as Android Advertising ID, IDFA, device model, and IP address) subject to their respective privacy policies:
-                    </p>
-                    <ul>
-                        <li><strong>Google Play Services:</strong> Core platform support.</li>
-                        <li><strong>Google AdMob:</strong> Serves non-intrusive banner or interstitial advertisements using advertising IDs.</li>
-                        <li><strong>Google Firebase (Authentication, Realtime Database & Analytics):</strong> Handles Smart Radio synchronization and anonymized app diagnostics.</li>
-                        <li><strong>Unity Services / Unity Analytics:</strong> Powers gameplay engines and game telemetry.</li>
-                        <li><strong>RevenueCat:</strong> Manages in-app purchase validation and subscription entitlements securely.</li>
-                    </ul>
-
-                    <h2>4. Children's Privacy Compliance (COPPA & GDPR-K)</h2>
-                    <p>
-                        Our applications are designed to be family-friendly and safe. For apps intended for family use (such as HushGuard or cut-a-boo!), we adhere strictly to the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and <strong>GDPR Article 8</strong> guidelines. We do not knowingly solicit or collect personal information from children under 13 (or under 16 in applicable EU jurisdictions).
+                    <p data-i18n="pol_intro_2">
+                        By downloading, installing, or using any of our applications, you agree to the collection and use of information in accordance with this Privacy Policy.
                     </p>
 
-                    <h2>5. Data Security and Storage</h2>
-                    <p>
+                    <h2 data-i18n="pol_sec1_title">1. Core Privacy Principles</h2>
+                    <ul>
+                        <li data-i18n="pol_sec1_1">Privacy-First Architecture: We prioritize local, on-device data processing whenever technically feasible.</li>
+                        <li data-i18n="pol_sec1_2">Zero Sale of Personal Data: We do not sell, rent, or trade personal identifiers or user data to third parties.</li>
+                        <li data-i18n="pol_sec1_3">Minimal Collection: We only request permissions necessary to execute core application features.</li>
+                    </ul>
+
+                    <h2 data-i18n="pol_sec2_title">2. Information Collection and Use by Product</h2>
+
+                    <h3 data-i18n="pol_hg_title">A. HushGuard (Smart Noise Masking & Baby Sleep Assistant)</h3>
+                    <ul>
+                        <li data-i18n="pol_hg_1">Microphone & Audio Processing: HushGuard requires microphone access to monitor real-time ambient noise decibels. All audio analysis is performed strictly locally on your device. We do NOT record, store, transmit, or stream your continuous microphone audio to external servers.</li>
+                        <li data-i18n="pol_hg_2">Custom Voice Recordings: If you record a soothing voice track within the app, the audio file is saved exclusively in your device's local storage.</li>
+                        <li data-i18n="pol_hg_3">Smart Radio Feature: When using parent-child device pairing, an anonymous room code is generated. Only calculated decibel levels and disturbance status are transmitted via Google Firebase Realtime Database. Raw audio is never transmitted across devices.</li>
+                    </ul>
+
+                    <h3 data-i18n="pol_st_title">B. SnackTask (Focus & Gamified Task Assistant)</h3>
+                    <ul>
+                        <li data-i18n="pol_st_1">Local Task & Gamification Data: Your task descriptions, focus session logs, experience points (XP), and earned achievement badges are stored locally on your device storage. We do not inspect, upload, or index your personal to-do list items or task titles on cloud servers.</li>
+                        <li data-i18n="pol_st_2">Anonymized Usage Metrics: Non-identifying operational analytics may be logged via standard framework SDKs to diagnose crash logs and improve gamification balancing.</li>
+                    </ul>
+
+                    <h3 data-i18n="pol_cab_title">C. cut-a-boo! & Mobile Games</h3>
+                    <ul>
+                        <li data-i18n="pol_cab_1">Gameplay Progress & Analytics: Game level progression, item unlocks, and interaction events may be processed via Unity Engine telemetry and Firebase to optimize level difficulty and user experience.</li>
+                    </ul>
+
+                    <h2 data-i18n="pol_sec3_title">3. Third-Party SDKs and Services</h2>
+                    <p data-i18n="pol_sec3_desc">
+                        Our applications may integrate trusted third-party software development kits (SDKs) to enable advertising, analytics, cloud synchronization, or in-app billing:
+                    </p>
+                    <ul>
+                        <li><strong>Google Play Services</strong></li>
+                        <li><strong>Google AdMob</strong></li>
+                        <li><strong>Google Firebase (Authentication & Realtime Database)</strong></li>
+                        <li><strong>Unity Services / Analytics</strong></li>
+                        <li><strong>RevenueCat</strong></li>
+                    </ul>
+
+                    <h2 data-i18n="pol_sec4_title">4. Children's Privacy Compliance (COPPA & GDPR-K)</h2>
+                    <p data-i18n="pol_sec4_desc">
+                        Our applications are designed to be family-friendly and safe. For apps intended for family use (such as HushGuard or cut-a-boo!), we adhere strictly to the Children's Online Privacy Protection Act (COPPA) and GDPR Article 8 guidelines. We do not knowingly solicit or collect personal information from children under 13.
+                    </p>
+
+                    <h2 data-i18n="pol_sec5_title">5. Data Security and Storage</h2>
+                    <p data-i18n="pol_sec5_desc">
                         We employ industry-standard encryption protocols (including HTTPS/TLS) for network traffic. However, please remember that no method of transmission over the internet or electronic storage is 100% secure. Local data remains under the user's control on their hardware.
                     </p>
 
-                    <h2>6. Limitation of Liability and Legal Disclaimers</h2>
-                    <p>
-                        OUR SERVICES AND APPLICATIONS ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.
+                    <h2 data-i18n="pol_sec6_title">6. Limitation of Liability and Legal Disclaimers</h2>
+                    <p data-i18n="pol_sec6_desc">
+                        OUR SERVICES AND APPLICATIONS ARE PROVIDED ON AN 'AS IS' AND 'AS AVAILABLE' BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED.
                     </p>
                     <ul>
-                        <li>HushGuard is a supportive noise-masking utility and is not a medical device or a substitute for adult parental supervision.</li>
-                        <li>Alya Interactive shall not be liable for any direct, indirect, incidental, or consequential damages arising out of device battery depletion, sound detection variance, hardware limitations, or app usage.</li>
+                        <li data-i18n="pol_sec6_1">HushGuard is a supportive noise-masking utility and is not a medical device or a substitute for adult parental supervision.</li>
+                        <li data-i18n="pol_sec6_2">Alya Interactive shall not be liable for any direct, indirect, incidental, or consequential damages arising out of device battery depletion, sound detection variance, hardware limitations, or app usage.</li>
                     </ul>
 
-                    <h2>7. Changes to This Privacy Policy</h2>
-                    <p>
+                    <h2 data-i18n="pol_sec7_title">7. Changes to This Privacy Policy</h2>
+                    <p data-i18n="pol_sec7_desc">
                         We may update our Privacy Policy periodically to reflect technological or regulatory updates. Any changes will be posted on this page with a revised effective date. Continued use of our applications constitutes acceptance of the updated policy.
                     </p>
 
-                    <h2>8. Contact Us</h2>
-                    <p>
+                    <h2 data-i18n="pol_sec8_title">8. Contact Us</h2>
+                    <p data-i18n="pol_sec8_desc">
                         If you have any questions, legal inquiries, or privacy concerns regarding this Privacy Policy, please contact us at:
                     </p>
                     <p>
@@ -202,6 +190,9 @@
                 <div class="footer-policy-link">
                     <a href="privacy-policy.html" class="contact-link">Privacy Policy</a>
                 </div>
+                <button class="back-to-top" id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Back to Top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
             </div>
         </div>
     </footer>
